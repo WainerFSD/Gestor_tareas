@@ -1,0 +1,44 @@
+[
+    {
+        "id": 2,
+        "nombre": "",
+        "completada": true,
+        "fecha": "21/08/2026 08:20"
+    },
+    {
+        "id": 3,
+        "nombre": "hola",
+        "completada": true,
+        "fecha": "22/08/2026 04:13"
+    },
+    {
+        "id": 4,
+        "nombre": "C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python314\\python.exe c:/Users/USUARIO/Documents/gestor_tareas/main.py",
+        "completada": true,
+        "fecha": "22/08/2026 04:14"
+    },
+    {
+        "id": 6,
+        "nombre": "Otra2",
+        "completada": true,
+        "fecha": "22/08/2026 04:42"
+    },
+    {
+        "id": 7,
+        "nombre": "NuevaNueva",
+        "completada": true,
+        "fecha": "22/08/2026 07:05"
+    },
+    {
+        "id": 8,
+        "nombre": "Matematicas discretas",
+        "completada": true,
+        "fecha": "23/08/2026 06:16"
+    },
+    {
+        "id": 9,
+        "nombre": "Pruebas",
+        "completada": false,
+        "fecha": "23/08/2026 07:14"
+    }
+]

@@ -1,0 +1,196 @@
+```text
+EJERCICIO: GESTOR DE TAREAS CON POO
+
+Crea un programa en Python utilizando una clase llamada GestorTareas.
+
+Debes guardar las tareas en un archivo llamado:
+
+tareas.json
+
+
+ESTRUCTURA DE UNA TAREA:
+
+{
+    "id": 1,
+    "nombre": "Estudiar Python",
+    "completada": false,
+    "fecha": "20/08/2026 10:30"
+}
+
+
+EL PROGRAMA DEBE TENER UN MENÚ:
+
+1. Agregar tarea
+2. Ver tareas
+3. Marcar tarea como completada
+4. Salir
+
+
+FUNCIONALIDADES:
+
+1. AGREGAR TAREA
+
+- Pedir al usuario el nombre de la tarea.
+- Validar que el nombre no esté vacío.
+- Asignar un ID automáticamente.
+- Obtener la fecha y hora actual usando datetime.
+- La tarea debe comenzar con:
+
+    "completada": False
+
+- Agregar la tarea a la lista.
+- Guardar las tareas en tareas.json usando json.dump().
+
+
+2. VER TAREAS
+
+- Cargar las tareas desde tareas.json usando json.load().
+- Mostrar todas las tareas.
+
+Ejemplo:
+
+ID: 1
+Tarea: Estudiar Python
+Estado: Pendiente
+Fecha: 20/08/2026 10:30
+
+ID: 2
+Tarea: Hacer ejercicio
+Estado: Completada
+Fecha: 21/08/2026 15:00
+
+
+3. MARCAR TAREA COMO COMPLETADA
+
+- Pedir al usuario el ID de la tarea.
+- Buscar la tarea.
+- Si existe:
+
+    tarea["completada"] = True
+
+- Guardar nuevamente las tareas en el archivo JSON.
+
+- Si no existe, mostrar:
+
+    La tarea no existe.
+
+
+4. MANEJO DE EXCEPCIONES
+
+Debes manejar:
+
+- ValueError:
+  Si el usuario ingresa algo que no sea un número cuando se pide un ID.
+
+- FileNotFoundError:
+  Si tareas.json todavía no existe.
+
+  En ese caso puedes devolver una lista vacía:
+
+    []
+
+- Exception:
+  Para manejar errores inesperados.
+
+
+ESTRUCTURA RECOMENDADA:
+
+class GestorTareas:
+
+    def __init__(self):
+        # atributos necesarios
+        pass
+
+    def cargar_tareas(self):
+        pass
+
+    def guardar_tareas(self):
+        pass
+
+    def agregar_tarea(self):
+        pass
+
+    def ver_tareas(self):
+        pass
+
+    def completar_tarea(self):
+        pass
+
+    def menu(self):
+        pass
+
+
+PISTAS:
+
+Para cargar tareas:
+
+try:
+    with open("tareas.json", "r", encoding="utf-8") as archivo:
+        ...
+except FileNotFoundError:
+    return []
+
+
+Para guardar tareas:
+
+with open("tareas.json", "w", encoding="utf-8") as archivo:
+    ...
+
+
+Para obtener la fecha:
+
+from datetime import datetime
+
+fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+
+Para generar el ID:
+
+Si existen tareas:
+
+    tareas[-1]["id"] + 1
+
+Si no existen:
+
+    1
+
+
+CONCEPTOS QUE PRACTICAS:
+
+- Clases y objetos
+- __init__
+- self
+- Métodos
+- Listas
+- Diccionarios
+- Funciones
+- Archivos
+- with open()
+- JSON
+- json.load()
+- json.dump()
+- datetime
+- strftime()
+- try
+- except
+- finally (si deseas usarlo)
+- ValueError
+- FileNotFoundError
+- Exception
+
+
+RETO EXTRA CUANDO TERMINES:
+
+5. Eliminar tarea
+6. Buscar tarea por nombre
+7. Mostrar solo tareas pendientes
+8. Mostrar solo tareas completadas
+
+
+CRUD:
+
+CREATE -> Agregar tarea
+READ   -> Ver tareas
+UPDATE -> Completar tarea
+DELETE -> Eliminar tarea
+```
